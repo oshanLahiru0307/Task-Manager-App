@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment3">
+    <fragment
+        android:id="@+id/homeFragment3"
+        android:name="com.example.task_manager.fragment.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment3_to_addNoteFragment3"
+            app:destination="@id/addNoteFragment3" />
+        <action
+            android:id="@+id/action_homeFragment3_to_editNoteFragment3"
+            app:destination="@id/editNoteFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/addNoteFragment3"
+        android:name="com.example.task_manager.fragment.AddNoteFragment"
+        android:label="AddNoteFragment" >
+        <action
+            android:id="@+id/action_addNoteFragment3_to_homeFragment3"
+            app:destination="@id/homeFragment3" />
+    </fragment>
+    <fragment
+        android:id="@+id/editNoteFragment3"
+        android:name="com.example.task_manager.fragment.EditNoteFragment"
+        android:label="EditNoteFragment" >
+        <argument
+            android:name="note"
+            app:argType="com.example.task_manager.model.Note"
+            app:nullable="true"/>
+        <action
+            android:id="@+id/action_editNoteFragment3_to_homeFragment3"
+            app:destination="@id/homeFragment3" />
+
+    </fragment>
+</navigation>
